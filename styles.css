@@ -1,0 +1,17 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body { 
+    background-color: #eff6e0;
+    display: flex;
+    flex-direction: column;
+}
+.title {
+    background-color: #aec3b0;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+
