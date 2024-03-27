@@ -15,3 +15,25 @@ body {
     justify-content: center;
 }
 
+.btn {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.btn > button {
+    background-color: #dad7cdbb;
+    font-size: 0.9rem;
+    border: solid;
+    border-color:#aec3b0;
+    padding: 10px 45px;
+    border-radius: 20px;
+}
+
+button:hover {
+    background-color: #dad7cd;
+}
+ 
+button:active {
+    border-color: #85b38a;
+}
