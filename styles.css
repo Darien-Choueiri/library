@@ -15,10 +15,17 @@ body {
     justify-content: center;
 }
 
+.card {
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    padding: 30px 30px 0px 30px;
+}
+
 .btn {
     display: flex;
     justify-content: center;
-    padding: 50px;
+    padding: 30px;
 }
 
 .btn > button {
@@ -36,4 +43,29 @@ button:hover {
  
 button:active {
     border-color: #85b38a;
+}
+
+dialog[open] {
+    display: flex;
+    flex-direction: column;
+}
+
+dialog[open] > form {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 10px;
+}
+
+.center {
+   position: absolute;
+   float: left;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+}
+
+input {
+    border-style: solid;
+    border-width: thin;
 }

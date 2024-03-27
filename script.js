@@ -14,14 +14,41 @@ function addBookToLibrary(book) {
     myLibrary.push(book);
 }
 
-const body = document.querySelector('body');
+const display = document.querySelector('.display-lib');
 
 function displayLibrary() {
+    display.innerHTML = '';
     myLibrary.forEach(function (book){
         const output = document.createElement('div');
         output.innerHTML = book.info();
         output.classList.add('card');
-        body.appendChild(output);
+        display.appendChild(output);
     });
 }
+
+const dialog = document.querySelector('dialog');
+const showButton = document.querySelector('.btn button');
+const closeButton = document.querySelector('#dialog > button');
+
+showButton.addEventListener('click', () => {
+    dialog.showModal();
+});
+
+closeButton.addEventListener('click', () => {
+    dialog.close();
+}); 
+
+const add = document.querySelector('form button');
+
+add.addEventListener('click', (event) => {
+    const author = document.querySelector('#author').value;
+    const title = document.querySelector('#title').value;
+    const pages = document.querySelector('#pages').value;
+    const read = document.querySelector('#read').checked;
+    const book = new Book(author, title, pages, read);
+    addBookToLibrary(book);
+    event.preventDefault();
+    dialog.close();
+    displayLibrary();
+});
 
