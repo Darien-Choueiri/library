@@ -1,9 +1,26 @@
+const myLibrary = [];
+
 function Book(title, author, pages, read) {
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.read = read;
     this.info = function() {
-        return console.log(`${title} by ${author}, ${pages} pages, ${read ? "read" : "not read yet"}`)
+        return `${title} by ${author}, ${pages} pages, ${read ? "read" : "not read yet"}`;
     }
+}
+
+function addBookToLibrary(book) {
+    myLibrary.push(book);
+}
+
+const body = document.querySelector('body');
+
+function displayLibrary() {
+    myLibrary.forEach(function (book){
+        const output = document.createElement('div');
+        output.innerHTML = book.info();
+        output.classList.add('card');
+        body.appendChild(output);
+    });
 }
