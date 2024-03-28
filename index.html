@@ -12,25 +12,23 @@
     <div class="title">
         Library
     </div>
-    <div class="display-lib">
-
-    </div>
+    
     <div class="center">
         <dialog id="dialog" class="center">
             <form>
+                <label for="title">Title:
+                    <input type="text" id="title" name="title">
+                </label>
+
                 <label for="author">Author:
                     <input type="text" id="author" name="author">
                 </label>
                 
-                <label for="title">Title:
-                    <input type="text" id="title" name="title">
-                </label>
-                
-                <label for="pages">No. Pages:
+                <label for="pages">No. of Pages:
                     <input type="text" id="pages" name="pages">
                 </label>
                 
-                <label for="read">Read
+                <label for="read">Have you read the book?
                     <input type="checkbox" id="read" name="read">
                 </label>
                 <div class="btns-form">
@@ -41,10 +39,12 @@
             
         </dialog> 
     </div>
-   
+
     <div class="btn">
         <button>Add Book</button>
     </div>
+
+    <div class="display-lib"></div>
 </body>
 </html>
 
