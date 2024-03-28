@@ -28,7 +28,7 @@ function displayLibrary() {
 
 const dialog = document.querySelector('dialog');
 const showButton = document.querySelector('.btn button');
-const closeButton = document.querySelector('#dialog > button');
+const closeButton = document.querySelector('.btns-form > button[type="button"]');
 
 showButton.addEventListener('click', () => {
     dialog.showModal();
@@ -38,7 +38,7 @@ closeButton.addEventListener('click', () => {
     dialog.close();
 }); 
 
-const add = document.querySelector('form button');
+const add = document.querySelector('.btns-form > button[type="submit"]');
 
 add.addEventListener('click', (event) => {
     const author = document.querySelector('#author').value;

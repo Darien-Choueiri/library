@@ -4,15 +4,19 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body { 
-    background-color: #eff6e0;
+    background-color: #31363F;
     display: flex;
     flex-direction: column;
 }
 .title {
-    background-color: #aec3b0;
+    background-color: #222831;
+    color: white;
     padding: 50px;
     display: flex;
     justify-content: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    border: solid #76ABAE;
 }
 
 .card {
@@ -29,25 +33,30 @@ body {
 }
 
 .btn > button {
-    background-color: #dad7cdbb;
-    font-size: 0.9rem;
-    border: solid;
-    border-color:#aec3b0;
+    background-color: #222831;
+    color: white;
+    font-size: 1.2rem;
+    border: solid #76ABAE;
     padding: 10px 45px;
     border-radius: 20px;
 }
 
 button:hover {
-    background-color: #dad7cd;
+    background-color: #31363F;
 }
  
 button:active {
-    border-color: #85b38a;
+    border-color: #EEEEEE;
 }
 
 dialog[open] {
     display: flex;
     flex-direction: column;
+    border-radius: 25px;
+    border-color:  #76ABAE;
+    color: white;
+    background-color: #222831;
+    font-size: 1.2rem;
 }
 
 dialog[open] > form {
@@ -66,6 +75,44 @@ dialog[open] > form {
 }
 
 input {
-    border-style: solid;
-    border-width: thin;
+    border: medium solid #76ABAE;
+    outline: none;
+}
+
+input:focus {
+    border: medium solid #555;
+    
+}
+
+.card {
+    color: white;
+}
+
+.btns-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btns-form > button {
+    height: 40px;
+    width: 120px;
+    font-size: 1.2rem;
+    background-color: white;
+    border-radius: 25px;
+    border: none;
+
+}
+
+.btns-form > button[type='submit'] {
+    background-color: #76ABAE;
+    color: white;
+}
+
+.btns-form > button:hover[type='button'] {
+    background-color: #d3d2d2;
+}
+
+.btns-form > button:hover[type='submit'] {
+    background-color: #36979c;
 }
