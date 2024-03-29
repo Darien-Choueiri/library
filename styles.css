@@ -10,7 +10,7 @@ body {
 }
 .title {
     background-color: #222831;
-    color: white;
+    color: #EEEEEE;;
     padding: 50px;
     display: flex;
     justify-content: center;
@@ -34,7 +34,7 @@ body {
 
 .btn > button {
     background-color: #222831;
-    color: white;
+    color: #EEEEEE;
     font-size: 1.2rem;
     border: solid #76ABAE;
     padding: 10px 45px;
@@ -54,7 +54,7 @@ dialog[open] {
     flex-direction: column;
     border-radius: 25px;
     border-color:  #76ABAE;
-    color: white;
+    color: #EEEEEE;
     background-color: #222831;
     font-size: 1.4rem;
 }
@@ -85,7 +85,7 @@ input:focus {
 }
 
 .card {
-    color: white;
+    color: #EEEEEE;
 }
 
 .btns-form {
@@ -98,15 +98,15 @@ input:focus {
     height: 40px;
     width: 120px;
     font-size: 1.2rem;
-    background-color: white;
-    border-radius: 25px;
+    background-color: #EEEEEE;
+    border-radius: 10px;
     border: none;
 
 }
 
 .btns-form > button[type='submit'] {
     background-color: #76ABAE;
-    color: white;
+    color: #EEEEEE;
 }
 
 .btns-form > button:hover[type='button'] {
@@ -133,7 +133,7 @@ input[type='checkbox'] {
     background-color: #222831;
     height: 250px;
     border-radius: 25px;
-    color: white;
+    color: #EEEEEE;;
     border: solid #76ABAE;
     display: flex;
     flex-direction: column;
@@ -146,4 +146,35 @@ input[type='checkbox'] {
 .card > div:nth-child(1) {
     font-size: 2rem;
     font-weight: bold;
+}
+
+.btns-card {
+    display: flex;
+    gap: 10px;
+}
+
+.btns-card > button{
+    width: 107px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.2rem;
+}
+
+.btns-card > button:nth-child(1) {
+    background-color: #76ABAE;
+    color: #EEEEEE;
+}
+
+.btns-card > button:nth-child(2) {
+    background-color: #EEEEEE;
+    color: #222831;
+}
+
+.btns-card > button:nth-child(1):hover {
+    background-color: #36979c;
+}
+
+.btns-card > button:nth-child(2):hover {
+    background-color: #d3d2d2;
 }

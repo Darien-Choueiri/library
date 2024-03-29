@@ -24,16 +24,18 @@ function displayLibrary() {
         const title = document.createElement('div');
         const author = document.createElement('div');
         const pages = document.createElement('div');
-        const read = document.createElement('div');
         const remove = document.createElement('button');
+        const read = document.createElement('button');
+        const buttons = document.createElement('div');
 
+        buttons.classList.add('btns-card');
         output.classList.add('card');
 
         title.innerHTML = book.title;
         author.innerHTML = book.author;
         pages.innerHTML = book.pages + " pages";
-        read.innerHTML = book.read;
         remove.innerHTML = "Delete";
+        read.innerHTML = "Read";
 
         output.dataset.indexNumber = index;
 
@@ -42,12 +44,18 @@ function displayLibrary() {
            myLibrary.splice(output.dataset.indexNumber, 1);
         });
 
+        read.addEventListener('click', () => {
+            book.read = !book.read;
+        });
+
+        buttons.appendChild(read);
+        buttons.appendChild(remove);
+
         output.appendChild(title); 
         output.appendChild(author);
         output.appendChild(pages);
-        output.appendChild(read);
-        output.appendChild(remove);
-
+        output.appendChild(buttons);
+        
         display.appendChild(output);
         index += 1;
     });
