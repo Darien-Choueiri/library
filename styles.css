@@ -154,6 +154,7 @@ input[type='checkbox'] {
 }
 
 .btns-card > button{
+    margin-top: 40px;
     width: 107px;
     height: 40px;
     border-radius: 10px;
@@ -171,10 +172,18 @@ input[type='checkbox'] {
     color: #222831;
 }
 
+.btns-card > button:nth-child(2):hover {
+    background-color: #d3d2d2;
+}
+
 .btns-card > button:nth-child(1):hover {
     background-color: #36979c;
 }
 
-.btns-card > button:nth-child(2):hover {
-    background-color: #d3d2d2;
+#secondary {
+    background-color: #ae443e;
+}
+
+#secondary:hover {
+    background-color: #8f211c;
 }

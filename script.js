@@ -35,7 +35,13 @@ function displayLibrary() {
         author.innerHTML = book.author;
         pages.innerHTML = book.pages + " pages";
         remove.innerHTML = "Delete";
-        read.innerHTML = "Read";
+        if (book.read === false){
+            read.innerText = 'Not Read';
+            read.id = 'secondary';
+        } else {
+            read.id = '';
+            read.innerText = 'Read';
+        }
 
         output.dataset.indexNumber = index;
 
@@ -45,6 +51,13 @@ function displayLibrary() {
         });
 
         read.addEventListener('click', () => {
+            if (book.read === true){
+                read.innerText = 'Not Read';
+                read.id = 'secondary';
+            } else {
+                read.id = '';
+                read.innerText = 'Read';
+            }
             book.read = !book.read;
         });
 
@@ -74,9 +87,8 @@ closeButton.addEventListener('click', () => {
     dialog.close();
 }); 
 
-const add = document.querySelector('.btns-form > button[type="submit"]');
-
-add.addEventListener('click', (event) => {
+const submit = document.querySelector('form');
+submit.addEventListener('submit', (event) => {
     const author = document.querySelector('#author').value;
     const title = document.querySelector('#title').value;
     const pages = document.querySelector('#pages').value;
@@ -87,4 +99,5 @@ add.addEventListener('click', (event) => {
     dialog.close();
     displayLibrary();
 });
+
 
